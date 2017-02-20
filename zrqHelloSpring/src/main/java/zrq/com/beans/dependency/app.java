@@ -5,10 +5,10 @@ import org.springframework.context.ApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 
 @SpringBootApplication
-public class ZrqHelloSpringApplication {
+public class app {
 
 	public static void main(String[] args) {
-	    ApplicationContext context = new ClassPathXmlApplicationContext("Beans.xml");
+	    ApplicationContext context = new ClassPathXmlApplicationContext("zrq/com/beans/dependency/Beans.xml");
 
 	      HelloWorld objA = (HelloWorld) context.getBean("helloWorld");
 	      objA.getMessage1();
