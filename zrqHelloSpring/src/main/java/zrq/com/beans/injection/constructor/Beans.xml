@@ -6,14 +6,13 @@
     http://www.springframework.org/schema/beans/spring-beans-3.0.xsd">
 
 
-
 	<!-- Definition for textEditor bean -->
-	<bean id="textEditor" class="zrq.com.beans.injection_constructor.TextEditor">
-		<property name="spellChecker" ref="spellChecker" />
+	<bean id="textEditor" class="zrq.com.beans.injection.constructor.TextEditor">
+		<constructor-arg ref="spellChecker" />
 	</bean>
 
 	<!-- Definition for spellChecker bean -->
-	<bean id="spellChecker" class="zrq.com.beans.injection_constructor.SpellChecker">
+	<bean id="spellChecker" class="zrq.com.beans.injection.constructor.SpellChecker">
 	</bean>
 
 </beans>

@@ -1,4 +1,4 @@
-package zrq.com.beans.injection;
+package zrq.com.beans.injection.constructor;
 
 public class SpellChecker {
 	public SpellChecker() {

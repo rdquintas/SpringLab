@@ -1,4 +1,4 @@
-package zrq.com.beans.injection;
+package zrq.com.beans.injection.settergetter;
 
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.ApplicationContext;
@@ -8,7 +8,7 @@ import org.springframework.context.support.ClassPathXmlApplicationContext;
 public class app {
 
 	public static void main(String[] args) {
-		ApplicationContext context = new ClassPathXmlApplicationContext("zrq/com/beans/injection/Beans.xml");
+		ApplicationContext context = new ClassPathXmlApplicationContext("zrq/com/beans/injection/settergetter/Beans.xml");
 
 		TextEditor te = (TextEditor) context.getBean("textEditor");
 
