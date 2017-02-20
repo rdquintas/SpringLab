@@ -1,0 +1,1 @@
+This example show Dependency Injection XML based
