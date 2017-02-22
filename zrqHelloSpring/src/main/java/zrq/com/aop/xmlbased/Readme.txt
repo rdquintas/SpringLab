@@ -1,2 +1,3 @@
-This example shows how to Spring STANDARD built-in events
+This example shows how to Spring Aspect Oriented Programming
+XML based
 
