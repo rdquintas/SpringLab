@@ -1,0 +1,1 @@
+Simple example with JAVA based Config beans creation
