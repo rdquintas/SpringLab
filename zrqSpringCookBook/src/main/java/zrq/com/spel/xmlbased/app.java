@@ -9,9 +9,9 @@ public class app {
 
 	public static void main(String[] args) {
 		ApplicationContext context = new ClassPathXmlApplicationContext("zrq/com/spel/xmlbased/Beans.xml");
-		Item cust = (Item) context.getBean("itemBean");
+		Customer cust = (Customer) context.getBean("customerBean");
 
-		System.out.println("Teste");
+		System.out.println(cust.toString());
 		
 	}
 }

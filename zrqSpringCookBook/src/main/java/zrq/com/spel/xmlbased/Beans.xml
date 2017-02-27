@@ -12,10 +12,10 @@
 		<property name="qty" value="10" />
 	</bean>
 
-<!-- 	<bean id="customerBean" class="zrq.com.spel.xmlbased.Customer"> -->
-<!-- 		<property name="item" value="#{itemBean}" /> -->
-<!-- 		<property name="itemName" value="#{itemBean.name}" /> -->
-<!-- 	</bean> -->
+	<bean id="customerBean" class="zrq.com.spel.xmlbased.Customer">
+		<property name="item" value="#{itemBean}" />
+		<property name="itemName" value="#{itemBean.name}" />
+	</bean>
 
 
 </beans>
