@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:aop="http://www.springframework.org/schema/aop"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+    http://www.springframework.org/schema/beans/spring-beans-3.0.xsd 
+    http://www.springframework.org/schema/aop 
+    http://www.springframework.org/schema/aop/spring-aop-3.0.xsd ">
+
+	<bean id="customerService" class="zrq.com.aop.example2.CustomerService">
+		<property name="name" value="Dr Ricardo Quintas" />
+		<property name="url" value="http://www.ricardoquintas.com" />
+	</bean>
+
+
+	<!-- This where we define the Advice - where we indicate the action to perform 
+		before, after, etc... -->
+	<bean id="hijackAroundMethodBeanAdvice" class="zrq.com.aop.example2.HijackAroundMethod" />
+
+	<!-- This where we define the Pointcut - the method name, where here is 
+		printName() -->
+	<bean id="customerPointcut" class="org.springframework.aop.support.NameMatchMethodPointcut">
+		<property name="mappedName" value="printName" />
+	</bean>
+
+	<!-- This where we define the Advisor - links de Advice with the Pointcut. 
+		It is the Advisor that we will pass into the bean -->
+	<bean id="customerAdvisor" class="org.springframework.aop.support.DefaultPointcutAdvisor">
+		<property name="pointcut" ref="customerPointcut" />
+		<property name="advice" ref="hijackAroundMethodBeanAdvice" />
+	</bean>
+
+	<bean id="customerServiceProxy" class="org.springframework.aop.framework.ProxyFactoryBean">
+		<property name="target" ref="customerService" />
+		<property name="interceptorNames">
+			<list>
+				<value>customerAdvisor</value>
+			</list>
+		</property>
+	</bean>
+
+</beans>
+
