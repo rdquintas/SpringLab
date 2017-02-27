@@ -1,0 +1,1 @@
+This example shows SPEL (Spring Expression Language) method invocation example
