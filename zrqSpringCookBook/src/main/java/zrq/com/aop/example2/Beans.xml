@@ -29,6 +29,19 @@
 		<property name="advice" ref="hijackAroundMethodBeanAdvice" />
 	</bean>
 
+	<!-- I also could have used an Advisor definition with REGEX. For example 
+		this customerAdvisor2 matches any method with the string *URK*  for example printURL() -->
+	<!-- <bean id="customerAdvisor2" -->
+	<!-- class="org.springframework.aop.support.RegexpMethodPointcutAdvisor"> -->
+	<!-- <property name="patterns"> -->
+	<!-- <list> -->
+	<!-- <value>.*URL.*</value> -->
+	<!-- </list> -->
+	<!-- </property> -->
+	<!-- <property name="advice" ref="hijackAroundMethodBeanAdvice" /> -->
+	<!-- </bean> -->
+
+
 	<bean id="customerServiceProxy" class="org.springframework.aop.framework.ProxyFactoryBean">
 		<property name="target" ref="customerService" />
 		<property name="interceptorNames">
