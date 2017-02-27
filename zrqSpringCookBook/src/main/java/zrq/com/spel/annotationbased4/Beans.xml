@@ -9,10 +9,10 @@
 
 	<context:annotation-config />
 
-	<bean id="numberBean" class="zrq.com.spel.annotationbased3.Number">
+	<bean id="itemBean" class="zrq.com.spel.annotationbased4.Item">
 	</bean>
 
-	<bean id="customerBean" class="zrq.com.spel.annotationbased3.Customer">
+	<bean id="customerBean" class="zrq.com.spel.annotationbased4.Customer">
 	</bean>
 
 

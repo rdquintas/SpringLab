@@ -1,2 +1,2 @@
 This example shows SPEL (Spring Expression Language)
-Operators example
+ternary operator (if-then-else) example
