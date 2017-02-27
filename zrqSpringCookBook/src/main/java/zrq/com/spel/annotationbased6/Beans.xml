@@ -7,13 +7,9 @@
     http://www.springframework.org/schema/context
     http://www.springframework.org/schema/context/spring-context-3.0.xsd">
 
-	<context:annotation-config />
 
-	<bean id="emailBean" class="zrq.com.spel.annotationbased6.Email">
-	</bean>
 
-	<bean id="customerBean" class="zrq.com.spel.annotationbased6.Customer">
-	</bean>
+	<context:component-scan base-package="zrq.com.spel.annotationbased6" />
 
 
 </beans>
