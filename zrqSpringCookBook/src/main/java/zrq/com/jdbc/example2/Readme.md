@@ -1,1 +1,1 @@
-Simple JDBC example using DAO
+Simple JDBC example using DAO without JdbcTemplate
