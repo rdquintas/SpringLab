@@ -1,4 +1,4 @@
-package zrq.com.aop.aspectj;
+package zrq.com.aop.aspectj.annotationbased1;
 
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.ApplicationContext;
@@ -9,7 +9,7 @@ public class App {
 
 	public static void main(String[] args) {
 
-		ApplicationContext context = new ClassPathXmlApplicationContext("zrq/com/aop/aspectj/Beans.xml");
+		ApplicationContext context = new ClassPathXmlApplicationContext("zrq/com/aop/aspectj/annotationbased1/Beans.xml");
 
 		CustomerBo customer = (CustomerBo) context.getBean("customerBo");
 		customer.addCustomer();

@@ -8,10 +8,10 @@
 
 	<aop:aspectj-autoproxy />
 
-	<bean id="customerBo" class="zrq.com.aop.aspectj.CustomerBoImpl" />
+	<bean id="customerBo" class="zrq.com.aop.aspectj.annotationbased1.CustomerBoImpl" />
 
 	<!-- Aspect -->
-	<bean id="logAspect" class="zrq.com.aop.aspectj.LoggingAspect" />
+	<bean id="logAspect" class="zrq.com.aop.aspectj.annotationbased1.LoggingAspect" />
 
 
 </beans>

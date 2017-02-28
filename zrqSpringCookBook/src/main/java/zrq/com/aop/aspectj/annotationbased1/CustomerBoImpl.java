@@ -1,4 +1,4 @@
-package zrq.com.aop.aspectj;
+package zrq.com.aop.aspectj.annotationbased1;
 
 public class CustomerBoImpl implements CustomerBo {
 

@@ -1,4 +1,4 @@
-package zrq.com.aop.annotationbased;
+package zrq.com.aop.aspectj.annotationbased2;
 
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.ApplicationContext;
@@ -9,7 +9,7 @@ public class App {
 
 	public static void main(String[] args) {
 
-		ApplicationContext context = new ClassPathXmlApplicationContext("zrq/com/aop/annotationbased/Beans.xml");
+		ApplicationContext context = new ClassPathXmlApplicationContext("zrq/com/aop/aspectj/annotationbased2/Beans.xml");
 
 		Student student = (Student) context.getBean("student");
 
