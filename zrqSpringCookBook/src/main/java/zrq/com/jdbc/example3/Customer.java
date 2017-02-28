@@ -9,6 +9,9 @@ public class Customer {
 	String name;
 	int age;
 
+	public Customer() {
+	}
+
 	public Customer(int custId, String name, int age) {
 		this.custId = custId;
 		this.name = name;
@@ -37,6 +40,11 @@ public class Customer {
 
 	public void setAge(int age) {
 		this.age = age;
+	}
+	
+	@Override
+	public String toString(){
+		return "ID: " + custId + ", Name: " + name + ", Age: " + age; 
 	}
 
 }

@@ -1,1 +1,1 @@
-Simple JDBC example using DAO with JdbcTemplate
+Simple JDBC example using DAO with JdbcTemplate using queryAll, find by ID, total lines, etc..
