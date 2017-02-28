@@ -1,17 +1,18 @@
-package zrq.com.spel.xmlbased;
+package zrq.com.beans.injection.constructor;
 
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 
 @SpringBootApplication
-public class app {
+public class App {
 
 	public static void main(String[] args) {
-		ApplicationContext context = new ClassPathXmlApplicationContext("zrq/com/spel/xmlbased/Beans.xml");
-		Customer cust = (Customer) context.getBean("customerBean");
+		ApplicationContext context = new ClassPathXmlApplicationContext("zrq/com/beans/injection/constructor/Beans.xml");
 
-		System.out.println(cust.toString());
-		
+		TextEditor te = (TextEditor) context.getBean("textEditor");
+
+		te.spellCheck();
+
 	}
 }

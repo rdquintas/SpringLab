@@ -1,19 +1,16 @@
-package zrq.com.beans.config.javabased.importconfig;
+package zrq.com.beans.config.javabased;
 
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 
 @SpringBootApplication
-public class app {
+public class App {
 
 	public static void main(String[] args) {
 		ApplicationContext context = new AnnotationConfigApplicationContext(AppConfig.class);
+		HelloWorld obj = (HelloWorld) context.getBean("helloBean");
 
-		CustomerBo customer = (CustomerBo) context.getBean("customer");
-		customer.printMsg("Hello 1");
-
-		SchedulerBo scheduler = (SchedulerBo) context.getBean("scheduler");
-		scheduler.printMsg("Hello 2");
+		obj.printHelloWorld("Spring3 Java Config");
 	}
 }

@@ -1,17 +1,17 @@
-package zrq.com.spel.annotationbased6;
+package zrq.com.spel.xmlbased;
 
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 
 @SpringBootApplication
-public class app {
+public class App {
 
 	public static void main(String[] args) {
-		ApplicationContext context = new ClassPathXmlApplicationContext("zrq/com/spel/annotationbased6/Beans.xml");
+		ApplicationContext context = new ClassPathXmlApplicationContext("zrq/com/spel/xmlbased/Beans.xml");
 		Customer cust = (Customer) context.getBean("customerBean");
 
-		System.out.println(cust);
+		System.out.println(cust.toString());
 		
 	}
 }

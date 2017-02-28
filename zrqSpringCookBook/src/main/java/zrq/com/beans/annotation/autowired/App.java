@@ -1,17 +1,16 @@
-package zrq.com.spel.annotationbased4;
+package zrq.com.beans.annotation.autowired;
 
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 
 @SpringBootApplication
-public class app {
+public class App {
 
 	public static void main(String[] args) {
-		ApplicationContext context = new ClassPathXmlApplicationContext("zrq/com/spel/annotationbased4/Beans.xml");
-		Customer cust = (Customer) context.getBean("customerBean");
+		ApplicationContext context = new ClassPathXmlApplicationContext("zrq/com/beans/annotation/autowired/Beans.xml");
+		TextEditor te = (TextEditor) context.getBean("textEditor");
 
-		System.out.println(cust);
-		
+		te.spellCheck();
 	}
 }
