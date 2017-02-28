@@ -13,6 +13,15 @@ public class App {
 
 		CustomerBo customer = (CustomerBo) context.getBean("customerBo");
 		customer.addCustomer();
+		customer.addCustomerReturnValue();
+		customer.addCustomerAround("Ricardo");
+		try {
+			customer.addCustomerThrowException();
+		} catch (Exception e) {
+			// TODO Auto-generated catch block
+//			e.printStackTrace();
+		}
+
 
 	}
 }
