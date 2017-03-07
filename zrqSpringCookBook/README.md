@@ -56,6 +56,7 @@ Project | Information
 Project | Information
 --- | ---
 [zrq.com.properties.file](https://github.com/rdquintas/SpringLab/tree/master/zrqSpringCookBook/src/main/java/zrq/com/properties/file) | This examples shows how to read and map values from a .properties file
+[zrq.com.properties.file2](https://github.com/rdquintas/SpringLab/tree/master/zrqSpringCookBook/src/main/java/zrq/com/properties/file2) | This examples shows how to read and map values from a .properties file. But I'm using XML config to define the location of the .properties file this time
 [zrq.com.resource.txtfile](https://github.com/rdquintas/SpringLab/tree/master/zrqSpringCookBook/src/main/java/zrq/com/resource/txtfile) | This examples shows how to read a TXT file using getResource
 
 
