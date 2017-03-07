@@ -1,0 +1,35 @@
+2017-03-07 17:15:37.211  INFO 7120 --- [main] zrq.com.mvc.example01.App                : Starting App on 5CG6130YV1 with PID 7120 (C:\01WORK\LEARN\WorkspaceSPRING\zrqSpringCookBook\target\classes started by Quintas.R in C:\01WORK\LEARN\WorkspaceSPRING\zrqSpringCookBook)
+2017-03-07 17:15:37.214  INFO 7120 --- [main] zrq.com.mvc.example01.App                : No active profile set, falling back to default profiles: default
+2017-03-07 17:15:37.274  INFO 7120 --- [main] s.c.a.AnnotationConfigApplicationContext : Refreshing org.springframework.context.annotation.AnnotationConfigApplicationContext@4e91d63f: startup date [Tue Mar 07 17:15:37 GMT 2017]; root of context hierarchy
+2017-03-07 17:15:38.069  INFO 7120 --- [main] o.s.j.e.a.AnnotationMBeanExporter        : Registering beans for JMX exposure on startup
+2017-03-07 17:15:38.082  INFO 7120 --- [main] zrq.com.mvc.example01.App                : Started App in 1.083 seconds (JVM running for 1.723)
+2017-03-07 17:15:38.083  INFO 7120 --- [Thread-3] s.c.a.AnnotationConfigApplicationContext : Closing org.springframework.context.annotation.AnnotationConfigApplicationContext@4e91d63f: startup date [Tue Mar 07 17:15:37 GMT 2017]; root of context hierarchy
+2017-03-07 17:15:38.085  INFO 7120 --- [Thread-3] o.s.j.e.a.AnnotationMBeanExporter        : Unregistering JMX-exposed beans on shutdown
+2017-03-07 17:17:14.229  INFO 9380 --- [main] zrq.com.mvc.example01.App                : Starting App on 5CG6130YV1 with PID 9380 (C:\01WORK\LEARN\WorkspaceSPRING\zrqSpringCookBook\target\classes started by Quintas.R in C:\01WORK\LEARN\WorkspaceSPRING\zrqSpringCookBook)
+2017-03-07 17:17:14.233  INFO 9380 --- [main] zrq.com.mvc.example01.App                : No active profile set, falling back to default profiles: default
+2017-03-07 17:17:14.284  INFO 9380 --- [main] s.c.a.AnnotationConfigApplicationContext : Refreshing org.springframework.context.annotation.AnnotationConfigApplicationContext@56de5251: startup date [Tue Mar 07 17:17:14 GMT 2017]; root of context hierarchy
+2017-03-07 17:17:15.040  INFO 9380 --- [main] o.s.j.e.a.AnnotationMBeanExporter        : Registering beans for JMX exposure on startup
+2017-03-07 17:17:15.051  INFO 9380 --- [main] zrq.com.mvc.example01.App                : Started App in 1.037 seconds (JVM running for 1.692)
+2017-03-07 17:17:15.052  INFO 9380 --- [Thread-3] s.c.a.AnnotationConfigApplicationContext : Closing org.springframework.context.annotation.AnnotationConfigApplicationContext@56de5251: startup date [Tue Mar 07 17:17:14 GMT 2017]; root of context hierarchy
+2017-03-07 17:17:15.054  INFO 9380 --- [Thread-3] o.s.j.e.a.AnnotationMBeanExporter        : Unregistering JMX-exposed beans on shutdown
+2017-03-07 17:18:56.014  INFO 10228 --- [main] zrq.com.mvc.example01.App                : Starting App on 5CG6130YV1 with PID 10228 (C:\01WORK\LEARN\WorkspaceSPRING\zrqSpringCookBook\target\classes started by Quintas.R in C:\01WORK\LEARN\WorkspaceSPRING\zrqSpringCookBook)
+2017-03-07 17:18:56.018  INFO 10228 --- [main] zrq.com.mvc.example01.App                : No active profile set, falling back to default profiles: default
+2017-03-07 17:18:56.068  INFO 10228 --- [main] s.c.a.AnnotationConfigApplicationContext : Refreshing org.springframework.context.annotation.AnnotationConfigApplicationContext@1a04f701: startup date [Tue Mar 07 17:18:56 GMT 2017]; root of context hierarchy
+2017-03-07 17:18:56.831  INFO 10228 --- [main] o.s.j.e.a.AnnotationMBeanExporter        : Registering beans for JMX exposure on startup
+2017-03-07 17:18:56.844  INFO 10228 --- [main] zrq.com.mvc.example01.App                : Started App in 1.048 seconds (JVM running for 1.683)
+2017-03-07 17:18:56.845  INFO 10228 --- [Thread-3] s.c.a.AnnotationConfigApplicationContext : Closing org.springframework.context.annotation.AnnotationConfigApplicationContext@1a04f701: startup date [Tue Mar 07 17:18:56 GMT 2017]; root of context hierarchy
+2017-03-07 17:18:56.847  INFO 10228 --- [Thread-3] o.s.j.e.a.AnnotationMBeanExporter        : Unregistering JMX-exposed beans on shutdown
+2017-03-07 17:21:00.476  INFO 4032 --- [main] zrq.com.mvc.example01.App                : Starting App on 5CG6130YV1 with PID 4032 (C:\01WORK\LEARN\WorkspaceSPRING\zrqSpringCookBook\target\classes started by Quintas.R in C:\01WORK\LEARN\WorkspaceSPRING\zrqSpringCookBook)
+2017-03-07 17:21:00.479  INFO 4032 --- [main] zrq.com.mvc.example01.App                : No active profile set, falling back to default profiles: default
+2017-03-07 17:21:00.530  INFO 4032 --- [main] s.c.a.AnnotationConfigApplicationContext : Refreshing org.springframework.context.annotation.AnnotationConfigApplicationContext@4e91d63f: startup date [Tue Mar 07 17:21:00 GMT 2017]; root of context hierarchy
+2017-03-07 17:21:01.277  INFO 4032 --- [main] o.s.j.e.a.AnnotationMBeanExporter        : Registering beans for JMX exposure on startup
+2017-03-07 17:21:01.290  INFO 4032 --- [main] zrq.com.mvc.example01.App                : Started App in 1.026 seconds (JVM running for 1.653)
+2017-03-07 17:21:01.290  INFO 4032 --- [Thread-3] s.c.a.AnnotationConfigApplicationContext : Closing org.springframework.context.annotation.AnnotationConfigApplicationContext@4e91d63f: startup date [Tue Mar 07 17:21:00 GMT 2017]; root of context hierarchy
+2017-03-07 17:21:01.292  INFO 4032 --- [Thread-3] o.s.j.e.a.AnnotationMBeanExporter        : Unregistering JMX-exposed beans on shutdown
+2017-03-07 17:22:10.294  INFO 912 --- [main] zrq.com.mvc.example01.App                : Starting App on 5CG6130YV1 with PID 912 (C:\01WORK\LEARN\WorkspaceSPRING\zrqSpringCookBook\target\classes started by Quintas.R in C:\01WORK\LEARN\WorkspaceSPRING\zrqSpringCookBook)
+2017-03-07 17:22:10.298  INFO 912 --- [main] zrq.com.mvc.example01.App                : No active profile set, falling back to default profiles: default
+2017-03-07 17:22:10.369  INFO 912 --- [main] s.c.a.AnnotationConfigApplicationContext : Refreshing org.springframework.context.annotation.AnnotationConfigApplicationContext@1d548a08: startup date [Tue Mar 07 17:22:10 GMT 2017]; root of context hierarchy
+2017-03-07 17:22:11.166  INFO 912 --- [main] o.s.j.e.a.AnnotationMBeanExporter        : Registering beans for JMX exposure on startup
+2017-03-07 17:22:11.179  INFO 912 --- [main] zrq.com.mvc.example01.App                : Started App in 1.162 seconds (JVM running for 1.69)
+2017-03-07 17:22:11.179  INFO 912 --- [Thread-3] s.c.a.AnnotationConfigApplicationContext : Closing org.springframework.context.annotation.AnnotationConfigApplicationContext@1d548a08: startup date [Tue Mar 07 17:22:10 GMT 2017]; root of context hierarchy
+2017-03-07 17:22:11.181  INFO 912 --- [Thread-3] o.s.j.e.a.AnnotationMBeanExporter        : Unregistering JMX-exposed beans on shutdown
