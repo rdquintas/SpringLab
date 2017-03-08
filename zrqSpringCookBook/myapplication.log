@@ -186,3 +186,6 @@ org.thymeleaf.exceptions.TemplateInputException: Error resolving template "greet
 2017-03-08 09:41:26.466  INFO 6680 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring FrameworkServlet 'dispatcherServlet'
 2017-03-08 09:41:26.467  INFO 6680 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : FrameworkServlet 'dispatcherServlet': initialization started
 2017-03-08 09:41:26.496  INFO 6680 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : FrameworkServlet 'dispatcherServlet': initialization completed in 29 ms
+2017-03-08 10:10:09.228  INFO 6680 --- [RMI TCP Connection(2)-192.168.30.242] inMXBeanRegistrar$SpringApplicationAdmin : Application shutdown requested.
+2017-03-08 10:10:09.228  INFO 6680 --- [RMI TCP Connection(2)-192.168.30.242] ationConfigEmbeddedWebApplicationContext : Closing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@527e5409: startup date [Wed Mar 08 09:41:23 GMT 2017]; root of context hierarchy
+2017-03-08 10:10:09.231  INFO 6680 --- [RMI TCP Connection(2)-192.168.30.242] o.s.j.e.a.AnnotationMBeanExporter        : Unregistering JMX-exposed beans on shutdown
