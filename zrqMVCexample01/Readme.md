@@ -1,0 +1,1 @@
+Simple MVC example using spring-boot
