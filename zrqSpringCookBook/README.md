@@ -51,13 +51,6 @@ Project | Information
 [zrq.com.jdbc.example4](https://github.com/rdquintas/SpringLab/tree/master/zrqSpringCookBook/src/main/java/zrq/com/jdbc/example4) | Simple JDBC example using DAO with JdbcTemplate using BATCH insert and update
 
 
-##MVC
-
-Project | Information
---- | ---
-[zrq.com.mvc.example01](https://github.com/rdquintas/SpringLab/tree/master/zrqSpringCookBook/src/main/java/zrq/com/mvc/example01) | Simple MVC example using spring-boot
-
-
 ##Files and Resources (.properties)
 
 Project | Information
