@@ -1,7 +1,5 @@
 # SpringLab
-Stuff I did with JAVA Spring.
-
-Et voila... les projets:
+Stuff I did with JAVA Spring. Voici les projets:
 
 Project | Information
 --- | ---
