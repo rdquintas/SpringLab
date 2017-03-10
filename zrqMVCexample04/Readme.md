@@ -15,4 +15,16 @@ http://localhost:8080/zrqMVCexample04/student
 ###Some Features
 
 - includes example of REDIRECT 
-- includes example FORM value handling
+- includes example FORM value handling for these fields
+   - Textbox
+   - Password
+   - Textarea
+   - Checkbox
+   - Checkboxes
+   - Radiobutton
+   - Radiobuttons
+   - Dropdown
+   - Listbox
+   - Hidden
+   - Errors
+   - Upload
