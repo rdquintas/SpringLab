@@ -50,6 +50,21 @@
 			<td>Favourite Number</td>
 			<td>${favoriteNumber}</td>
 		</tr>
+		<tr>
+			<td>Country</td>
+			<td>${country}</td>
+		</tr>
+		<tr>
+			<td>Skills</td>
+			<td>
+				<%
+					String[] skills = (String[]) request.getAttribute("skills");
+					for (String skill : skills) {
+						out.println(skill);
+					}
+				%>
+			</td>
+		</tr>
 	</table>
 </body>
 </html>

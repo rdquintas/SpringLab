@@ -1,7 +1,9 @@
 package zrq.com.controller;
 
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.ModelMap;
@@ -25,14 +27,12 @@ public class StudentController {
 		model.addAttribute("name", student.getName());
 		model.addAttribute("age", student.getAge());
 		model.addAttribute("id", student.getId());
-
 		model.addAttribute("password", student.getPassword());
 		model.addAttribute("address", student.getAddress());
 		model.addAttribute("receivePaper", student.isReceivePaper());
 		model.addAttribute("favoriteFrameworks", student.getFavoriteFrameworks());
 		model.addAttribute("gender", student.getGender());
 		model.addAttribute("favoriteNumber", student.getFavoriteNumber());
-
 		return "result";
 	}
 
@@ -66,6 +66,26 @@ public class StudentController {
 		numbersList.add("3");
 		numbersList.add("4");
 		return numbersList;
+	}
+
+	@ModelAttribute("countryList")
+	public Map<String, String> getCountryList() {
+		Map<String, String> countryList = new HashMap<String, String>();
+		countryList.put("US", "United States");
+		countryList.put("CH", "China");
+		countryList.put("SG", "Singapore");
+		countryList.put("MY", "Malaysia");
+		return countryList;
+	}
+
+	@ModelAttribute("skillsList")
+	public Map<String, String> getSkillsList() {
+		Map<String, String> skillList = new HashMap<String, String>();
+		skillList.put("Hibernate", "Hibernate");
+		skillList.put("Spring", "Spring");
+		skillList.put("Apache Wicket", "Apache Wicket");
+		skillList.put("Struts", "Struts");
+		return skillList;
 	}
 
 }
