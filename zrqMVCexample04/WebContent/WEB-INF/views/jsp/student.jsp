@@ -33,6 +33,21 @@
 				<td><form:checkbox path="receivePaper" /></td>
 			</tr>
 			<tr>
+				<td><form:label path="favoriteFrameworks">Favorite Web Frameworks</form:label></td>
+				<td><form:checkboxes items="${webFrameworkList}"
+						path="favoriteFrameworks" /></td>
+			</tr>
+			<tr>
+				<td><form:label path="gender">Gender</form:label></td>
+				<td><form:radiobutton path="gender" value="M" label="Male" />
+					<form:radiobutton path="gender" value="F" label="Female" /></td>
+			</tr>
+			<tr>
+				<td><form:label path="favoriteNumber">Favorite Number</form:label></td>
+				<td><form:radiobuttons path="favoriteNumber"
+						items="${numbersList}" /></td>
+			</tr>
+			<tr>
 				<td colspan="2"><input type="submit" value="Submit" /></td>
 			</tr>
 		</table>
