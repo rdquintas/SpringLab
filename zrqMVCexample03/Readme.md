@@ -5,6 +5,7 @@ Simple MVC example:
 - with xxxx-servlet.xml
 - uses CSS (bootstrap) and JS files
 - reads variable from URL
+- adds value to model variable
 
 I can call it like this
 http://localhost:8080/zrqMVCexample03/
