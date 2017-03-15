@@ -33,6 +33,7 @@ public class StudentController {
 		model.addAttribute("favoriteFrameworks", student.getFavoriteFrameworks());
 		model.addAttribute("gender", student.getGender());
 		model.addAttribute("favoriteNumber", student.getFavoriteNumber());
+		model.addAttribute("skills", student.getSkills());
 		return "result";
 	}
 
