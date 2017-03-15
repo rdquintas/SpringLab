@@ -21,6 +21,8 @@
 		</property>
 	</bean>
 
+	<bean id="studentValidator" class="zrq.com.model.StudentValidator" />
+
 	<mvc:resources mapping="/resources/**" location="/resources/" />
 
 	<mvc:annotation-driven />

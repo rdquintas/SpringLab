@@ -13,6 +13,8 @@ public class Student {
 	private String country;
 	private String[] skills;
 
+
+
 	public String[] getSkills() {
 		return skills;
 	}

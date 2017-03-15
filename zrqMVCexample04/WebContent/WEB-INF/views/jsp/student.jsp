@@ -3,10 +3,27 @@
 <head>
 <title>Spring MVC Form Handling</title>
 </head>
+
+<style>
+.error {
+	color: #ff0000;
+}
+
+.errorblock {
+	color: #000;
+	background-color: #ffEEEE;
+	border: 3px solid #ff0000;
+	padding: 8px;
+	margin: 16px;
+}
+</style>
+
 <body>
 
 	<h1>This form adds stuff</h1>
-	<form:form method="POST" action="/zrqMVCexample04/addStudent">
+	<form:form method="POST" commandName="student" action="/zrqMVCexample04/addStudent">
+		<form:errors path="*" cssClass="errorblock" element="div" />
+
 		<table>
 			<tr>
 				<td><form:label path="name">Name</form:label></td>
