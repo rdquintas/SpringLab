@@ -1,0 +1,9 @@
+insert into Student (age, name) values (46, 'Ricardo');
+insert into student (age, name) values (15, 'Manuel');
+insert into student (age, name) values (11, 'Afonso');
+insert into student (age, name) values (20, 'Sebastiao');
+insert into student (age, name) values (45, 'Rita');
+insert into student (age, name) values (15, 'Margarida');
+insert into student (age, name) values (13, 'Catarina');
+insert into student (age, name) values (44, 'Jaime');
+insert into student (age, name) values (48, 'Pedro');
