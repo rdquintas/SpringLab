@@ -27,21 +27,32 @@
 		/> -->
 
 	<!-- Mapping option 2 - with ControllerClassNameHandlerMapping -->
-<!-- 	<bean -->
-<!-- 		class="org.springframework.web.servlet.mvc.support.ControllerClassNameHandlerMapping" /> -->
-<!-- 	<bean class="zrq.com.controllers.HelloController" /> -->
-<!-- 	<bean class="zrq.com.controllers.WelcomeController" /> -->
+	<!-- <bean -->
+	<!-- class="org.springframework.web.servlet.mvc.support.ControllerClassNameHandlerMapping" 
+		/> -->
+	<!-- <bean class="zrq.com.controllers.HelloController" /> -->
+	<!-- <bean class="zrq.com.controllers.WelcomeController" /> -->
 
-
-	<!-- Mapping option 3 - with SimpleUrlHandlerMapping -->
-	<bean class="org.springframework.web.servlet.handler.SimpleUrlHandlerMapping">
-		<property name="mappings">
-			<props>
-				<prop key="/welcome.htm">welcomeController</prop>
-				<prop key="/helloWorld.htm">helloController</prop>
-			</props>
-		</property>
+	<!-- Mapping option 3 - with ControllerClassNameHandlerMapping -->
+	<bean
+		class="org.springframework.web.servlet.mvc.support.ControllerClassNameHandlerMapping">
+		<property name="caseSensitive" value="true" />
+		<property name="pathPrefix" value="/customer" />
 	</bean>
-	<bean id="helloController" class="zrq.com.controllers.HelloController" />
-	<bean id="welcomeController" class="zrq.com.controllers.WelcomeController" />
-</beans>
+	<bean class="zrq.com.controllers.HelloController" />
+	<bean class="zrq.com.controllers.WelcomeController" />
+
+	<!-- Mapping option 4 - with SimpleUrlHandlerMapping -->
+	<!-- <bean class="org.springframework.web.servlet.handler.SimpleUrlHandlerMapping"> -->
+	<!-- <property name="mappings"> -->
+	<!-- <props> -->
+	<!-- <prop key="/welcome.htm">welcomeController</prop> -->
+	<!-- <prop key="/helloWorld.htm">helloController</prop> -->
+	<!-- </props> -->
+	<!-- </property> -->
+	<!-- </bean> -->
+	<!-- <bean id="helloController" class="zrq.com.controllers.HelloController" 
+		/> -->
+	<!-- <bean id="welcomeController" class="zrq.com.controllers.WelcomeController" 
+		/> -->
+	</beans>

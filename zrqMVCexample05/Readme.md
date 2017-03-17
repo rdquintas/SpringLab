@@ -20,5 +20,12 @@ This mapping allows us to map a bean using string wildcards
 2) Mapping with ControllerClassNameHandlerMapping
 In Spring MVC, ControllerClassNameHandlerMapping use convention to map requested URL to Controller (convention over configuration). It takes the Class name, remove the ‘Controller’ suffix if exists and return the remaining text, lower-cased and with a leading “/”.
 
-3) Mapping with SimpleUrlHandlerMapping
+3) Mapping with ControllerClassNameHandlerMapping
+Similar to 2) but this time I'm setting case_sensitive = true
+this means for example hello.htm will work, but Hello.html won't.
+Moreover, the prefix property allow us to prefix the URL.
+The example with "customer" will make the URL to work like this instead:
+http://localhost:8080/zrqMVCexample05/customer/hello.htm
+
+4) Mapping with SimpleUrlHandlerMapping
 SimpleUrlHandlerMapping class helps to explicitly map URLs with their controllers respectively
