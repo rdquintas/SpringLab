@@ -9,3 +9,6 @@ http://localhost:8080/zrqMVCexample07/rssfeed
 
 To test the XML I can call it like this:
 http://localhost:8080/zrqMVCexample07/coffee/cafezinho_bom
+
+To test the JSON I can call it like this:
+http://localhost:8080/zrqMVCexample07/user/ricardo
