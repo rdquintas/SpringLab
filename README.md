@@ -10,5 +10,5 @@ Project | Information
 [zrqMVCexample04](https://github.com/rdquintas/SpringLab/tree/master/zrqMVCexample04) | Simple MVC example: created using Dynamic Web Project, with web.xml (servlet v3.1), with xxxx-servlet.xml, uses CSS (bootstrap) and JS files, FORM handling stuff.
 [zrqMVCexample05](https://github.com/rdquintas/SpringLab/tree/master/zrqMVCexample05) | Simple MVC example: created using Dynamic Web Project, with web.xml (servlet v3.1), with xxxx-servlet.xml, examples of BEAN mapping to URLs
 [zrqMVCexample06](https://github.com/rdquintas/SpringLab/tree/master/zrqMVCexample06) | Simple MVC example with HIBERNATE validator for form errors. With i18n for messages.properties
-[zrqMVCexample07](https://github.com/rdquintas/SpringLab/tree/master/zrqMVCexample07) | Simple MVC example with download for: RSS, XML, JSON, EXCELL, PDF
+[zrqMVCexample07](https://github.com/rdquintas/SpringLab/tree/master/zrqMVCexample07) | Simple MVC example with download for: RSS, XML, JSON
 
