@@ -1,4 +1,4 @@
-Simple MVC example RSS, XML, EXCELL
+Simple MVC example RSS, XML
 
 - created using Dynamic Web Project
 - with web.xml (servlet v3.1)
