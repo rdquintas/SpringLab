@@ -3,5 +3,6 @@
 	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-3.2.xsd">
 
 	<bean id="ExcelRevenueSummary" class="zrq.com.excel.ExcelRevenueReportView" />
+	<bean id="PdfRevenueSummary" class="zrq.com.pdf.PdfRevenueReportView" />
 
 </beans>

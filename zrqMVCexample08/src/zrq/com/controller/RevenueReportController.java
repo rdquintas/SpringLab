@@ -1,4 +1,4 @@
-package zrq.com.excel;
+package zrq.com.controller;
 
 import java.util.HashMap;
 import java.util.Map;
@@ -33,7 +33,9 @@ public class RevenueReportController extends AbstractController {
 		} else if ("EXCEL".equals(output.toUpperCase())) {
 			// return excel view
 			return new ModelAndView("ExcelRevenueSummary", "revenueData", revenueData);
-
+		} else if ("PDF".equals(output.toUpperCase())) {
+			// return excel view
+			return new ModelAndView("PdfRevenueSummary", "revenueData", revenueData);
 		} else {
 			// return normal view
 			return new ModelAndView("RevenueSummary", "revenueData", revenueData);
