@@ -50,6 +50,7 @@ Project | Information
 [zrq.com.jdbc.example3](https://github.com/rdquintas/SpringLab/tree/master/zrqSpringCookBook/src/main/java/zrq/com/jdbc/example3) | Simple JDBC example using DAO with JdbcTemplate using queryAll, find by ID, total lines, etc..
 [zrq.com.jdbc.example4](https://github.com/rdquintas/SpringLab/tree/master/zrqSpringCookBook/src/main/java/zrq/com/jdbc/example4) | Simple JDBC example using DAO with JdbcTemplate using BATCH insert and update
 [zrq.com.jdbc.example5](https://github.com/rdquintas/SpringLab/tree/master/zrqSpringCookBook/src/main/java/zrq/com/jdbc/example5) | Simple JDBC example using DAO with JdbcTemplate, EMBEDDED database HSQLDB, .sql scripts to create schema and data
+[zrq.com.jdbc.example6](https://github.com/rdquintas/SpringLab/tree/master/zrqSpringCookBook/src/main/java/zrq/com/jdbc/example6) | Simple JDBC example using DAO with JdbcTemplate, EMBEDDED database HSQLDB, .sql scripts to create schema and data. Very complete example
 
 
 ##Files and Resources (.properties)
