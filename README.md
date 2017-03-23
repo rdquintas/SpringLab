@@ -12,4 +12,3 @@ Project | Information
 [zrqMVCexample06](https://github.com/rdquintas/SpringLab/tree/master/zrqMVCexample06) | Simple MVC example with HIBERNATE validator for form errors. With i18n for messages.properties
 [zrqMVCexample07](https://github.com/rdquintas/SpringLab/tree/master/zrqMVCexample07) | Simple MVC example with download for: RSS, XML, JSON
 [zrqMVCexample08](https://github.com/rdquintas/SpringLab/tree/master/zrqMVCexample08) | Simple MVC example with download for: PDF and EXCEL
-
