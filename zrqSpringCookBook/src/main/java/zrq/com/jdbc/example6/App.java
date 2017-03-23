@@ -1,5 +1,7 @@
 package zrq.com.jdbc.example6;
 
+import java.util.List;
+
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
@@ -12,6 +14,18 @@ public class App {
 
 		ContactJDBCTemplate theJDBCTemplate = (ContactJDBCTemplate) context.getBean("contactJDBCTemplate");
 		System.out.println("ZRQ OK");
+
+		System.out.println("ZRQ findFirstNameById: " + theJDBCTemplate.findFirstNameById(3L));
+		System.out.println("ZRQ findLastNameById: " + theJDBCTemplate.findLastNameById(3L));
+		List<Contact> contacts = theJDBCTemplate.findAll();
+		for (Contact record : contacts) {
+			System.out.print("ID: " + record.getId());
+			System.out.print(", First_Name: " + record.getFirst_name());
+			System.out.print(", Last_Name: " + record.getLast_name());
+			System.out.print(", Birth_Date: " + record.getBirth_date().toGMTString());
+			System.out.println("");
+		}
+
 		// System.out.println("------Records Creation--------");
 		// studentJDBCTemplate.create("Zara", 11);
 		// studentJDBCTemplate.create("Nuha", 2);

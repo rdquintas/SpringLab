@@ -1,68 +1,57 @@
 package zrq.com.jdbc.example6;
 
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
+
 import javax.sql.DataSource;
 
 import org.springframework.beans.factory.BeanCreationException;
 import org.springframework.beans.factory.InitializingBean;
 import org.springframework.jdbc.core.JdbcTemplate;
+import org.springframework.jdbc.core.namedparam.NamedParameterJdbcTemplate;
 
 public class ContactJDBCTemplate implements ContactDAO, InitializingBean {
 	private DataSource dataSource;
-	private JdbcTemplate jdbcTemplateObject;
+	private JdbcTemplate jdbcTemplate;
+	private NamedParameterJdbcTemplate namedParameterJdbcTemplate;
 
 	public void setDataSource(DataSource dataSource) {
 		this.dataSource = dataSource;
-		this.jdbcTemplateObject = new JdbcTemplate(dataSource);
+		this.jdbcTemplate = new JdbcTemplate(dataSource);
+		this.namedParameterJdbcTemplate = new NamedParameterJdbcTemplate(dataSource);
+
 	}
 
 	@Override
 	public void afterPropertiesSet() throws Exception {
 		if (dataSource == null) {
 			throw new BeanCreationException("Must set dataSource on ContactDao");
-		} else{
+		} else {
 			System.out.println("ZRQ todo lá dentro!");
 		}
 	}
-	// public void create(String name, Integer age) {
-	// String SQL = "insert into Student (name, age) values (?, ?)";
-	//
-	// jdbcTemplateObject.update(SQL, name, age);
-	// System.out.println("Created Record Name = " + name + " Age = " + age);
-	// return;
-	// }
-
-	// public Student getStudent(Integer id) {
-	// String SQL = "select * from Student where id = ?";
-	// Student student = jdbcTemplateObject.queryForObject(SQL, new Object[] {
-	// id }, new StudentMapper());
-	// return student;
-	// }
-
-	// public List<Student> listStudents() {
-	// String SQL = "select * from Student";
-	// List<Student> students = jdbcTemplateObject.query(SQL, new
-	// StudentMapper());
-	// return students;
-	// }
-
-	// public void delete(Integer id) {
-	// String SQL = "delete from Student where id = ?";
-	// jdbcTemplateObject.update(SQL, id);
-	// System.out.println("Deleted Record with ID = " + id);
-	// return;
-	// }
-
-	// public void update(Integer id, Integer age) {
-	// String SQL = "update Student set age = ? where id = ?";
-	// jdbcTemplateObject.update(SQL, age, id);
-	// System.out.println("Updated Record with ID = " + id);
-	// return;
-	// }
 
 	@Override
+	public List<Contact> findAll() {
+		String sql = "select id, first_name, last_name, birth_date from contact";
+		return jdbcTemplate.query(sql, new ContactMapper());
+	}
+
+	// This example uses NAMED JDBCtemplate (order of params is NOT important)
+	@Override
 	public String findLastNameById(Long id) {
-		// TODO Auto-generated method stub
-		return null;
+		String sql = "select last_name from contact where id = :contactId";
+		Map<String, Object> namedParameters = new HashMap<String, Object>();
+		namedParameters.put("contactId", id);
+		return namedParameterJdbcTemplate.queryForObject(sql, namedParameters, String.class);
+	}
+
+	// This example uses NORMAL JDBCtemplate (order of params is important)
+	@Override
+	public String findFirstNameById(Long id) {
+		return jdbcTemplate.queryForObject("select first_name from contact where id = ?", new Object[] { id },
+				String.class);
 	}
 
 }
