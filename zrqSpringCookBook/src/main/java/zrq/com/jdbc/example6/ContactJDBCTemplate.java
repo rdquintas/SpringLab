@@ -54,4 +54,12 @@ public class ContactJDBCTemplate implements ContactDAO, InitializingBean {
 				String.class);
 	}
 
+	@Override
+	public List<Contact> findAllWithDetail() {
+		String sql = "select c.id, c.first_name, c.last_name, c.birth_date"
+				+ ", t.id as contact_tel_id, t.tel_type, t.tel_number from contact c "
+				+ "left join contact_tel_detail t on c.id = t.contact_id";
+		return jdbcTemplate.query(sql, new ContactWithDetailExtractor());
+	}
+
 }

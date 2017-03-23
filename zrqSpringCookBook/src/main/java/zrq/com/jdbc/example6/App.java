@@ -17,6 +17,7 @@ public class App {
 
 		System.out.println("ZRQ findFirstNameById: " + theJDBCTemplate.findFirstNameById(3L));
 		System.out.println("ZRQ findLastNameById: " + theJDBCTemplate.findLastNameById(3L));
+
 		List<Contact> contacts = theJDBCTemplate.findAll();
 		for (Contact record : contacts) {
 			System.out.print("ID: " + record.getId());
@@ -24,6 +25,17 @@ public class App {
 			System.out.print(", Last_Name: " + record.getLast_name());
 			System.out.print(", Birth_Date: " + record.getBirth_date().toGMTString());
 			System.out.println("");
+		}
+
+		List<Contact> contactsWithDetail = theJDBCTemplate.findAllWithDetail();
+		for (Contact contact : contactsWithDetail) {
+			System.out.println("ZRQ contact: " + contact.toString());
+			if (contact.getContactTelDetails() != null) {
+				for (ContactTelDetail contactTelDetail : contact.getContactTelDetails()) {
+					System.out.println(" > contactTelDetail: " + contactTelDetail.toString());
+				}
+			}
+			System.out.println();
 		}
 
 		// System.out.println("------Records Creation--------");

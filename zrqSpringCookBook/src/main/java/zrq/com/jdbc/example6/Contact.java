@@ -1,5 +1,6 @@
 package zrq.com.jdbc.example6;
 
+import java.util.ArrayList;
 import java.util.Date;
 
 public class Contact {
@@ -7,6 +8,15 @@ public class Contact {
 	private String first_name;
 	private String last_name;
 	private Date birth_date;
+	private ArrayList<ContactTelDetail> contactTelDetails;
+	
+	public ArrayList<ContactTelDetail> getContactTelDetails() {
+		return contactTelDetails;
+	}
+
+	public void setContactTelDetails(ArrayList<ContactTelDetail> contactTelDetails) {
+		this.contactTelDetails = contactTelDetails;
+	}
 
 	public Long getId() {
 		return id;
@@ -38,6 +48,11 @@ public class Contact {
 
 	public void setBirth_date(Date birth_date) {
 		this.birth_date = birth_date;
+	}
+	
+	@Override
+	public String toString(){
+		return "ID: " + id + " - " + first_name + " " + last_name + " - " + birth_date.toGMTString();
 	}
 
 }

@@ -6,11 +6,13 @@ public interface ContactDAO {
 
 	List<Contact> findAll();
 
-	// List<Contact> findByFirstName(String firstName);
+	List<Contact> findAllWithDetail();
 
 	String findLastNameById(Long id);
 
 	String findFirstNameById(Long id);
+
+	// List<Contact> findByFirstName(String firstName);
 
 	// void insert(Contact contact);
 
