@@ -69,4 +69,17 @@ public class ContactJDBCTemplate implements ContactDAO, InitializingBean {
 		return jdbcTemplate.query(sql, new ContactWithDetailExtractor());
 	}
 
+	// UPDATE
+	@Override
+	public void update(Contact contact) {
+		UpdateContact upd = new UpdateContact(this.dataSource);
+		Map<String, Object> paramMap = new HashMap<String, Object>();
+		paramMap.put("first_name", contact.getFirst_name());
+		paramMap.put("last_name", contact.getLast_name());
+		paramMap.put("birth_date", contact.getBirth_date());
+		paramMap.put("id", contact.getId());
+		upd.updateByNamedParam(paramMap);
+		System.out.println("(e) Existing contact updated with id: " + contact.getId());
+	}
+
 }

@@ -1,5 +1,7 @@
 package zrq.com.jdbc.example6;
 
+import java.util.Date;
+import java.util.GregorianCalendar;
 import java.util.List;
 
 import org.springframework.boot.autoconfigure.SpringBootApplication;
@@ -52,6 +54,14 @@ public class App {
 			}
 			System.out.println();
 		}
+
+		// (e) Example with UPDATE using SPRING class MappingSqlQuery
+		Contact contact = new Contact();
+		contact.setId(1l);
+		contact.setFirst_name("Chris");
+		contact.setLast_name("John");
+		contact.setBirth_date(new Date((new GregorianCalendar(1977, 10, 1)).getTime().getTime()));
+		theJDBCTemplate.update(contact);
 
 	}
 }

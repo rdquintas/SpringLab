@@ -12,11 +12,11 @@ public interface ContactDAO {
 
 	String findFirstNameById(Long id);
 
+	void update(Contact contact);
+
 	// List<Contact> findByFirstName(String firstName);
 
 	// void insert(Contact contact);
-
-	// void update(Contact contact);
 
 	// void delete(Long contactId);
 }
