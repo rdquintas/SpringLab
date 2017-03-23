@@ -15,9 +15,11 @@ public class App {
 		ContactJDBCTemplate theJDBCTemplate = (ContactJDBCTemplate) context.getBean("contactJDBCTemplate");
 		System.out.println("ZRQ OK");
 
+		// 2 examples with SELECT SINGLE
 		System.out.println("ZRQ findFirstNameById: " + theJDBCTemplate.findFirstNameById(3L));
 		System.out.println("ZRQ findLastNameById: " + theJDBCTemplate.findLastNameById(3L));
 
+		// Example with SELECT INTO TABLE
 		List<Contact> contacts = theJDBCTemplate.findAll();
 		for (Contact record : contacts) {
 			System.out.print("ID: " + record.getId());
@@ -27,6 +29,7 @@ public class App {
 			System.out.println("");
 		}
 
+		// Example with SELECT JOIN
 		List<Contact> contactsWithDetail = theJDBCTemplate.findAllWithDetail();
 		for (Contact contact : contactsWithDetail) {
 			System.out.println("ZRQ contact: " + contact.toString());
@@ -37,28 +40,6 @@ public class App {
 			}
 			System.out.println();
 		}
-
-		// System.out.println("------Records Creation--------");
-		// studentJDBCTemplate.create("Zara", 11);
-		// studentJDBCTemplate.create("Nuha", 2);
-		// studentJDBCTemplate.create("Ayan", 15);
-		//
-		// System.out.println("------Listing Multiple Records--------");
-		// List<Student> students = studentJDBCTemplate.listStudents();
-		// for (Student record : students) {
-		// System.out.print("ID : " + record.getId());
-		// System.out.print(", Name : " + record.getName());
-		// System.out.println(", Age : " + record.getAge());
-		// }
-		//
-		// System.out.println("----Updating Record with ID = 2 -----");
-		// studentJDBCTemplate.update(2, 20);
-		//
-		// System.out.println("----Listing Record with ID = 2 -----");
-		// Student student = studentJDBCTemplate.getStudent(2);
-		// System.out.print("ID : " + student.getId());
-		// System.out.print(", Name : " + student.getName());
-		// System.out.println(", Age : " + student.getAge());
 
 	}
 }
