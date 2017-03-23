@@ -32,12 +32,14 @@ public class ContactJDBCTemplate implements ContactDAO, InitializingBean {
 		}
 	}
 
+	// SELECT INTO TABLE
 	@Override
 	public List<Contact> findAll() {
 		String sql = "select id, first_name, last_name, birth_date from contact";
 		return jdbcTemplate.query(sql, new ContactMapper());
 	}
 
+	// SELECT SINGLE
 	// This example uses NAMED JDBCtemplate (order of params is NOT important)
 	@Override
 	public String findLastNameById(Long id) {
@@ -47,6 +49,7 @@ public class ContactJDBCTemplate implements ContactDAO, InitializingBean {
 		return namedParameterJdbcTemplate.queryForObject(sql, namedParameters, String.class);
 	}
 
+	// SELECT SINGLE
 	// This example uses NORMAL JDBCtemplate (order of params is important)
 	@Override
 	public String findFirstNameById(Long id) {
@@ -54,6 +57,7 @@ public class ContactJDBCTemplate implements ContactDAO, InitializingBean {
 				String.class);
 	}
 
+	// SELECT JOIN
 	@Override
 	public List<Contact> findAllWithDetail() {
 		String sql = "select c.id, c.first_name, c.last_name, c.birth_date"
