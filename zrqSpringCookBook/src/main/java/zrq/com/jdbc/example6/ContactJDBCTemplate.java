@@ -20,7 +20,10 @@ public class ContactJDBCTemplate implements ContactDAO, InitializingBean {
 		this.dataSource = dataSource;
 		this.jdbcTemplate = new JdbcTemplate(dataSource);
 		this.namedParameterJdbcTemplate = new NamedParameterJdbcTemplate(dataSource);
+	}
 
+	public DataSource getDataSource() {
+		return dataSource;
 	}
 
 	@Override

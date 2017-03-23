@@ -15,24 +15,36 @@ public class App {
 		ContactJDBCTemplate theJDBCTemplate = (ContactJDBCTemplate) context.getBean("contactJDBCTemplate");
 		System.out.println("ZRQ OK");
 
-		// 2 examples with SELECT SINGLE
-		System.out.println("ZRQ findFirstNameById: " + theJDBCTemplate.findFirstNameById(3L));
-		System.out.println("ZRQ findLastNameById: " + theJDBCTemplate.findLastNameById(3L));
+		// (a) 2 examples with SELECT SINGLE
+		System.out.println("(a) ZRQ findFirstNameById: " + theJDBCTemplate.findFirstNameById(3L));
+		System.out.println("(a) ZRQ findLastNameById: " + theJDBCTemplate.findLastNameById(3L));
 
-		// Example with SELECT INTO TABLE
+		// (b) Example with SELECT INTO TABLE
 		List<Contact> contacts = theJDBCTemplate.findAll();
 		for (Contact record : contacts) {
-			System.out.print("ID: " + record.getId());
+			System.out.print("(b) ID: " + record.getId());
 			System.out.print(", First_Name: " + record.getFirst_name());
 			System.out.print(", Last_Name: " + record.getLast_name());
 			System.out.print(", Birth_Date: " + record.getBirth_date().toGMTString());
 			System.out.println("");
 		}
 
-		// Example with SELECT JOIN
+		// (c) Example with SELECT INTO TABLE using SPRING class MappingSqlQuery
+		System.out.println("(c) -- SPRING class MappingSqlQuery --");
+		SelectAllContacts selectAllContacts = new SelectAllContacts(theJDBCTemplate.getDataSource());
+		List<Contact> contacts2 = selectAllContacts.execute();
+		for (Contact record : contacts2) {
+			System.out.print("(c) ID: " + record.getId());
+			System.out.print(", First_Name: " + record.getFirst_name());
+			System.out.print(", Last_Name: " + record.getLast_name());
+			System.out.print(", Birth_Date: " + record.getBirth_date().toGMTString());
+			System.out.println("");
+		}
+
+		// (d) Example with SELECT JOIN
 		List<Contact> contactsWithDetail = theJDBCTemplate.findAllWithDetail();
 		for (Contact contact : contactsWithDetail) {
-			System.out.println("ZRQ contact: " + contact.toString());
+			System.out.println("(d) ZRQ contact: " + contact.toString());
 			if (contact.getContactTelDetails() != null) {
 				for (ContactTelDetail contactTelDetail : contact.getContactTelDetails()) {
 					System.out.println(" > contactTelDetail: " + contactTelDetail.toString());
