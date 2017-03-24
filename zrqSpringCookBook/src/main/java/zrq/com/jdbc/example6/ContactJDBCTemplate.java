@@ -10,6 +10,8 @@ import org.springframework.beans.factory.BeanCreationException;
 import org.springframework.beans.factory.InitializingBean;
 import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.jdbc.core.namedparam.NamedParameterJdbcTemplate;
+import org.springframework.jdbc.support.GeneratedKeyHolder;
+import org.springframework.jdbc.support.KeyHolder;
 
 public class ContactJDBCTemplate implements ContactDAO, InitializingBean {
 	private DataSource dataSource;
@@ -80,6 +82,19 @@ public class ContactJDBCTemplate implements ContactDAO, InitializingBean {
 		paramMap.put("id", contact.getId());
 		upd.updateByNamedParam(paramMap);
 		System.out.println("(e) Existing contact updated with id: " + contact.getId());
+	}
+
+	@Override
+	public void insert(Contact contact) {
+		InsertContact ins = new InsertContact(this.dataSource);
+		Map<String, Object> paramMap = new HashMap<String, Object>();
+		paramMap.put("first_name", contact.getFirst_name());
+		paramMap.put("last_name", contact.getLast_name());
+		paramMap.put("birth_date", contact.getBirth_date());
+		KeyHolder keyHolder = new GeneratedKeyHolder();
+		ins.updateByNamedParam(paramMap, keyHolder);
+		contact.setId(keyHolder.getKey().longValue());
+		System.out.println("(f) New contact inserted with id: " + contact.getId());
 	}
 
 }

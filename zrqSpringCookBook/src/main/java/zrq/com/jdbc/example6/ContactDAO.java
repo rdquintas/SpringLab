@@ -14,9 +14,9 @@ public interface ContactDAO {
 
 	void update(Contact contact);
 
-	// List<Contact> findByFirstName(String firstName);
+	void insert(Contact contact);
 
-	// void insert(Contact contact);
+	// List<Contact> findByFirstName(String firstName);
 
 	// void delete(Long contactId);
 }

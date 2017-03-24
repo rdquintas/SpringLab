@@ -55,7 +55,7 @@ public class App {
 			System.out.println();
 		}
 
-		// (e) Example with UPDATE using SPRING class MappingSqlQuery
+		// (e) Example with UPDATE
 		Contact contact = new Contact();
 		contact.setId(1l);
 		contact.setFirst_name("Chris");
@@ -63,5 +63,11 @@ public class App {
 		contact.setBirth_date(new Date((new GregorianCalendar(1977, 10, 1)).getTime().getTime()));
 		theJDBCTemplate.update(contact);
 
+		// (f) Example with INSERT 
+		Contact contactIns = new Contact();
+		contactIns.setFirst_name("Ricardo");
+		contactIns.setLast_name("Quintas");
+		contactIns.setBirth_date(new Date((new GregorianCalendar(1971, 2, 4)).getTime().getTime()));
+		theJDBCTemplate.insert(contact);		
 	}
 }
