@@ -1,5 +1,10 @@
 Example with HIBERNATE
 
+- Very complete example
+- select list
+- select JOIN
+- JDBC properties file. 
+- Uses MySQL.
 
 ---------
 
