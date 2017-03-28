@@ -36,8 +36,8 @@ public class ContactDaoImpl implements ContactDao {
 
 	@Override
 	public Contact findById(Long id) {
-		// TODO Auto-generated method stub
-		return null;
+		return (Contact) sessionFactory.getCurrentSession().getNamedQuery("Contact.findById").setParameter("id", id)
+				.uniqueResult();
 	}
 
 	@Override
