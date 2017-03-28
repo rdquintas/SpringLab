@@ -31,8 +31,7 @@ public class ContactDaoImpl implements ContactDao {
 
 	@Override
 	public List<Contact> findAllWithDetail() {
-		// TODO Auto-generated method stub
-		return null;
+		return sessionFactory.getCurrentSession().getNamedQuery("Contact.findAllWithDetail").list();
 	}
 
 	@Override

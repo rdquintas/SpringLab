@@ -16,6 +16,7 @@ public class App {
 		ApplicationContext ctx = new ClassPathXmlApplicationContext("zrq/com/hibernate/example3/Beans.xml");
 		ContactDao contactDao = ctx.getBean("contactDao", ContactDao.class);
 		listContacts(contactDao.findAll());
+		listContactsDetails(contactDao.findAllWithDetail());
 		System.out.println("ZRQ OK");
 	}
 
@@ -24,6 +25,16 @@ public class App {
 		System.out.println("Listing contacts without details:");
 		for (Contact contact : contacts) {
 			System.out.println(contact);
+			System.out.println();
+		}
+	}
+	
+	private static void listContactsDetails(List<Contact> contacts) {
+		System.out.println("");
+		System.out.println("Listing contacts WITH details:");
+		for (Contact contact : contacts) {
+			System.out.println(contact);
+			System.out.println(contact.getContactTelDetails().toString());
 			System.out.println();
 		}
 	}
