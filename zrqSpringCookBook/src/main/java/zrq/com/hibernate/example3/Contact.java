@@ -51,6 +51,9 @@ public class Contact implements Serializable {
 	@Version
 	@Column(name = "VERSION")
 	public int getVersion() {
+		if (this.version == null) {
+			this.version = 0;
+		}
 		return this.version;
 	}
 
