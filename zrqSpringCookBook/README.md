@@ -39,6 +39,7 @@ Project | Information
 --- | ---
 [zrq.com.hibernate.example1](https://github.com/rdquintas/SpringLab/tree/master/zrqSpringCookBook/src/main/java/zrq/com/hibernate/example1) | Simple HIBERNATE example. Uses Hibernate config XML. If table doesn't exist, it will be created automatically. No need to run CREATE TABLE sql, before 1st app run.
 [zrq.com.hibernate.example2](https://github.com/rdquintas/SpringLab/tree/master/zrqSpringCookBook/src/main/java/zrq/com/hibernate/example2) | Simple HIBERNATE example. Uses simple mapping XML config file. NO Hibernate config XML. Everything is done by code. It is necessary to run SQL before app 1st run
+[zrq.com.hibernate.example3](https://github.com/rdquintas/SpringLab/tree/master/zrqSpringCookBook/src/main/java/zrq/com/hibernate/example3) | Simple HIBERNATE example. JDBC properties file. Uses MySQL. Very complete example
 
 
 ## JDBC
