@@ -2,7 +2,7 @@ Example with HIBERNATE
 
 - Very complete example
 - SELECT *
-- SELECTG JOIN
+- SELECT JOIN
 - SELECT SINGLE
 - JDBC properties file. 
 - Uses MySQL.
