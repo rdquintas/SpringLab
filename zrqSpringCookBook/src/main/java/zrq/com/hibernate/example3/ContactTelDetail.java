@@ -16,7 +16,7 @@ import javax.persistence.Version;
 @Entity
 @Table(name = "contact_tel_detail")
 public class ContactTelDetail implements Serializable {
-	private Long the_id;
+	private Long id;
 	private int version;
 	private String telType;
 	private String telNumber;
@@ -32,13 +32,13 @@ public class ContactTelDetail implements Serializable {
 
 	@Id
 	@GeneratedValue(strategy = IDENTITY)
-	@Column(name = "THE_ID")
-	public Long getThe_Id() {
-		return this.the_id;
+	@Column(name = "ID")
+	public Long getId() {
+		return this.id;
 	}
 
-	public void setThe_Id(Long the_id) {
-		this.the_id = the_id;
+	public void setId(Long id) {
+		this.id = id;
 	}
 
 	@Version
@@ -80,7 +80,7 @@ public class ContactTelDetail implements Serializable {
 	}
 
 	public String toString() {
-		return "Contact Tel Detail - Id: " + the_id + ", Contact id: " + getContact().getThe_id() + ", Type: " + telType
+		return "Contact Tel Detail - Id: " + id + ", Contact id: " + getContact().getId() + ", Type: " + telType
 				+ ", Number: " + telNumber;
 	}
 }

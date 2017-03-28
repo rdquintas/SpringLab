@@ -24,7 +24,7 @@ import javax.persistence.Version;
 @Entity
 @Table(name = "contact")
 public class Contact implements Serializable {
-	private Long the_id;
+	private Long id;
 	private Integer version;
 	private String firstName;
 	private String lastName;
@@ -34,13 +34,13 @@ public class Contact implements Serializable {
 
 	@Id
 	@GeneratedValue(strategy = IDENTITY)
-	@Column(name = "THE_ID")
-	public Long getThe_id() {
-		return this.the_id;
+	@Column(name = "ID")
+	public Long getId() {
+		return this.id;
 	}
 
-	public void setThe_id(Long the_id) {
-		this.the_id = the_id;
+	public void setId(Long id) {
+		this.id = id;
 	}
 
 	@Version
@@ -110,7 +110,7 @@ public class Contact implements Serializable {
 	}
 
 	public String toString() {
-		return "Contact - Id: " + the_id + ", First name: " + firstName + ", Last name: " + lastName + ", Birthday: "
+		return "Contact - Id: " + id + ", First name: " + firstName + ", Last name: " + lastName + ", Birthday: "
 				+ birthDate;
 	}
 }

@@ -15,9 +15,8 @@ public class App {
 	public static void main(String[] args) {
 		ApplicationContext ctx = new ClassPathXmlApplicationContext("zrq/com/hibernate/example3/Beans.xml");
 		ContactDao contactDao = ctx.getBean("contactDao", ContactDao.class);
-//		listContacts(contactDao.findAll());
+		listContacts(contactDao.findAll());
 		System.out.println("ZRQ OK");
-
 	}
 
 	private static void listContacts(List<Contact> contacts) {
