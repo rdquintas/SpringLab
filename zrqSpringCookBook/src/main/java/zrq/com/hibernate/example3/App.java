@@ -1,13 +1,12 @@
 package zrq.com.hibernate.example3;
 
 import java.util.Date;
-import java.util.GregorianCalendar;
 import java.util.List;
+import java.util.Set;
 
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
-import org.springframework.orm.hibernate5.*;
 
 @SpringBootApplication
 public class App {
@@ -34,6 +33,19 @@ public class App {
 		insDetail = new ContactTelDetail("Mobile", "2222222222");
 		ins.addContactTelDetail(insDetail);
 		contactDao.save(ins);
+
+		// Example with UPDATE
+		Contact upd = contactDao.findById(1l);
+		upd.setFirstName("Kim Fung");
+		Set<ContactTelDetail> contactTels = upd.getContactTelDetails();
+		ContactTelDetail toDeleteContactTel = null;
+		for (ContactTelDetail contactTel : contactTels) {
+			if (contactTel.getTelType().equals("Home")) {
+				toDeleteContactTel = contactTel;
+			}
+		}
+		upd.removeContactTelDetail(toDeleteContactTel);
+		contactDao.save(upd);
 
 		// Example with SELECT *
 		listContacts(contactDao.findAll());

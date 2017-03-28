@@ -5,6 +5,7 @@ Example with HIBERNATE
 - SELECT JOIN
 - SELECT SINGLE
 - INSERT
+- UPDATE
 - JDBC properties file. 
 - Uses MySQL.
 
