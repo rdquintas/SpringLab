@@ -1,8 +1,9 @@
 Example with HIBERNATE
 
 - Very complete example
-- select list
-- select JOIN
+- SELECT *
+- SELECTG JOIN
+- SELECT SINGLE
 - JDBC properties file. 
 - Uses MySQL.
 
