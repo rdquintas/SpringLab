@@ -4,6 +4,7 @@ Example with HIBERNATE
 - SELECT *
 - SELECT JOIN
 - SELECT SINGLE
+- INSERT
 - JDBC properties file. 
 - Uses MySQL.
 
