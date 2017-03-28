@@ -1,11 +1,11 @@
-Example with HIBERNATE
+CRUD Example with HIBERNATE
 
-- Very complete example
 - SELECT *
 - SELECT JOIN
 - SELECT SINGLE
 - INSERT
 - UPDATE
+- DELETE
 - JDBC properties file. 
 - Uses MySQL.
 

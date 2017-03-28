@@ -21,9 +21,15 @@ public class App {
 		System.out.println("**** Contact with id 1:" + contact);
 		System.out.println("*****************");
 
+		// Example with DELETE
+		Contact del = contactDao.findById(7L);
+		contactDao.delete(del);
+		
 		// Example with INSERT SINGLE
 		// I have do delete entry from MySQL after 1st run - otherwise I get
-		// duplicate key and corresponding Exception
+		// duplicate key and corresponding Exception.
+		// use the previous code for delete and run with: Contact del = contactDao.findById(your_id_hereL);
+
 		Contact ins = new Contact();
 		ins.setFirstName("Ricardo");
 		ins.setLastName("Quintas");
@@ -32,8 +38,8 @@ public class App {
 		ins.addContactTelDetail(insDetail);
 		insDetail = new ContactTelDetail("Mobile", "2222222222");
 		ins.addContactTelDetail(insDetail);
-		contactDao.save(ins);
-
+		contactDao.save(ins);	
+		
 		// Example with UPDATE
 		Contact upd = contactDao.findById(1l);
 		upd.setFirstName("Kim Fung");

@@ -9,7 +9,7 @@ Project | Information
 [zrq.com.aop.aspectj.xmlbased](https://github.com/rdquintas/SpringLab/tree/master/zrqSpringCookBook/src/main/java/zrq/com/aop/aspectj/xmlbased) | This example shows how to Spring Aspect Oriented Programming using AspectJ without annotation, but instead XML Based config
 [zrq.com.aop.example1](https://github.com/rdquintas/SpringLab/tree/master/zrqSpringCookBook/src/main/java/zrq/com/aop/example1) | This example shows how to Spring Aspect Oriented Programming. We use different combination on the XML config.
 [zrq.com.aop.example2](https://github.com/rdquintas/SpringLab/tree/master/zrqSpringCookBook/src/main/java/zrq/com/aop/example2) | This example shows how to Spring Aspect Oriented Programming Here we define: Pointcut, Advice, Advisor. And we target a specific method - printName() - this time.
-[zrq.com.aop.example3](https://github.com/rdquintas/SpringLab/tree/master/zrqSpringCookBook/src/main/java/zrq/com/aop/example3) | This example shows how to Spring Aspect Oriented Programming. But instead of creating proxy beans manually, I use here Auto Proxy Mechanism. In auto proxy mechanism, you just need to create a BeanNameAutoProxyCreator, and include all your beans (via bean name, or regular expression name) and ‘advisor’ into a single unit. 
+[zrq.com.aop.example3](https://github.com/rdquintas/SpringLab/tree/master/zrqSpringCookBook/src/main/java/zrq/com/aop/example3) | This example shows how to Spring Aspect Oriented Programming. But instead of creating proxy beans manually, I use here Auto Proxy Mechanism. In auto proxy mechanism, you just need to create a BeanNameAutoProxyCreator, and include all your beans (via bean name, or regular expression name) and ï¿½advisorï¿½ into a single unit. 
 [zrq.com.aop.xmlbased](https://github.com/rdquintas/SpringLab/tree/master/zrqSpringCookBook/src/main/java/zrq/com/aop/xmlbased) | This example shows how to Spring Aspect Oriented Programming XML based
 
 
@@ -39,7 +39,7 @@ Project | Information
 --- | ---
 [zrq.com.hibernate.example1](https://github.com/rdquintas/SpringLab/tree/master/zrqSpringCookBook/src/main/java/zrq/com/hibernate/example1) | Simple HIBERNATE example. Uses Hibernate config XML. If table doesn't exist, it will be created automatically. No need to run CREATE TABLE sql, before 1st app run.
 [zrq.com.hibernate.example2](https://github.com/rdquintas/SpringLab/tree/master/zrqSpringCookBook/src/main/java/zrq/com/hibernate/example2) | Simple HIBERNATE example. Uses simple mapping XML config file. NO Hibernate config XML. Everything is done by code. It is necessary to run SQL before app 1st run
-[zrq.com.hibernate.example3](https://github.com/rdquintas/SpringLab/tree/master/zrqSpringCookBook/src/main/java/zrq/com/hibernate/example3) | Simple HIBERNATE example. JDBC properties file. Uses MySQL. Very complete example
+[zrq.com.hibernate.example3](https://github.com/rdquintas/SpringLab/tree/master/zrqSpringCookBook/src/main/java/zrq/com/hibernate/example3) | CRUD example HIBERNATE. JDBC properties file. Uses MySQL. Very complete example
 
 
 ## JDBC
