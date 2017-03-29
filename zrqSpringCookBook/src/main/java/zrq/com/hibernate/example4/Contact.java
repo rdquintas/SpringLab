@@ -23,8 +23,6 @@ import javax.persistence.Temporal;
 import javax.persistence.TemporalType;
 import javax.persistence.Version;
 
-import zrq.com.hibernate.example3.Hobby;
-
 @Entity
 @Table(name = "contact")
 @NamedQueries({
