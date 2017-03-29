@@ -4,8 +4,6 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 
-import zrq.com.hibernate.example3.ContactDao;
-
 @SpringBootApplication
 public class App {
 
