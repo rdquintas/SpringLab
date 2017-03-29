@@ -25,7 +25,8 @@ import javax.persistence.Version;
 
 @Entity
 @Table(name = "contact")
-@NamedQueries({
+@NamedQueries({ 
+	    @NamedQuery(name = "Contact.findAll", query = "select c from Contact c"),
 		@NamedQuery(name = "Contact.findById", query = "select distinct c from Contact c left join fetch c.contactTelDetails t left join fetch c.hobbies h where c.id = :id"),
 		@NamedQuery(name = "Contact.findAllWithDetail", query = "select distinct c from Contact c left join fetch c.contactTelDetails t left join fetch c.hobbies h") })
 public class Contact implements Serializable {
@@ -99,7 +100,7 @@ public class Contact implements Serializable {
 	}
 
 	public void addContactTelDetail(ContactTelDetail contactTelDetail) {
-		contactTelDetail.setContact(this);		
+		contactTelDetail.setContact(this);
 		getContactTelDetails().add(contactTelDetail);
 	}
 

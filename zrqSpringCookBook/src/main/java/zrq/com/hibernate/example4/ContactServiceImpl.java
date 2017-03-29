@@ -11,21 +11,21 @@ import org.springframework.stereotype.Repository;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
-
-
 @Service("jpaContactService")
 @Repository
 @Transactional
 public class ContactServiceImpl implements ContactService {
-	
+
 	private Log log = LogFactory.getLog(ContactServiceImpl.class);
-	
+
 	@PersistenceContext
 	private EntityManager em;
 
+	@Transactional(readOnly = true)
 	@Override
 	public List<Contact> findAll() {
-		return null;
+		List<Contact> contacts = em.createNamedQuery("Contact.findAll", Contact.class).getResultList();
+		return contacts;
 	}
 
 	@Override
