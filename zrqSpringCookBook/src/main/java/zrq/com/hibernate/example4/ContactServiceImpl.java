@@ -37,7 +37,8 @@ public class ContactServiceImpl implements ContactService {
 
 	@Override
 	public Contact findById(Long id) {
-		TypedQuery<Contact> query = em.createNamedQuery("Contact.findById", Contact.class);
+		TypedQuery<Contact> query = em.createNamedQuery(
+				"Contact.findById", Contact.class);
 		query.setParameter("id", id);
 		return query.getSingleResult();
 	}
