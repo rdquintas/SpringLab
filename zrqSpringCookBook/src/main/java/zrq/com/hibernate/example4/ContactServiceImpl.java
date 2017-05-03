@@ -37,19 +37,29 @@ public class ContactServiceImpl implements ContactService {
 
 	@Override
 	public Contact findById(Long id) {
-		TypedQuery<Contact> query = em.createNamedQuery(
-				"Contact.findById", Contact.class);
+		TypedQuery<Contact> query = em.createNamedQuery("Contact.findById", Contact.class);
 		query.setParameter("id", id);
 		return query.getSingleResult();
 	}
 
 	@Override
 	public Contact save(Contact contact) {
-		return null;
+		if (contact.getId() == null) {
+			log.info("Inserting new contact");
+			em.persist(contact);
+		} else {
+			em.merge(contact);
+			log.info("Updating existing contact");
+		}
+		log.info("Contact saved with id: " + contact.getId());
+		return contact;
 	}
 
 	@Override
 	public void delete(Contact contact) {
+		Contact mergedContact = em.merge(contact);
+		em.remove(mergedContact);
+		log.info("Contact with id: " + contact.getId() + " deleted successfully");
 	}
 
 }

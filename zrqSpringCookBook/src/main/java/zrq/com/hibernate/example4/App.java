@@ -1,6 +1,8 @@
 package zrq.com.hibernate.example4;
 
+import java.util.Date;
 import java.util.List;
+import java.util.Set;
 
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.ApplicationContext;
@@ -14,7 +16,37 @@ public class App {
 		// ContactDao contactDao = ctx.getBean("contactDao", ContactDao.class);
 		ContactService contactService = ctx.getBean("jpaContactService", ContactService.class);
 		ContactSummaryService contactServicePOJO = ctx.getBean("contactSummaryService", ContactSummaryService.class);
-		
+
+		// Example with INSERT
+		Contact contact = new Contact();
+		contact.setFirstName("Michael");
+		contact.setLastName("Jackson");
+		contact.setBirthDate(new Date());
+
+		ContactTelDetail contactTelDetail = new ContactTelDetail("Home", "1111111111");
+		contact.addContactTelDetail(contactTelDetail);
+		contactTelDetail = new ContactTelDetail("Mobile", "2222222222");
+		contact.addContactTelDetail(contactTelDetail);
+
+		try {
+			contactService.save(contact);
+		} catch (Exception e) {
+			System.out.println("That one is already there, try another.");
+		}
+
+		// Example with UPDATE
+		Contact contactUPD = contactService.findById(1l);
+		contactUPD.setFirstName("Justin");
+		Set<ContactTelDetail> contactTelsUPD = contactUPD.getContactTelDetails();
+		ContactTelDetail toDeleteContactTelUPD = null;
+		for (ContactTelDetail contactTel : contactTelsUPD) {
+			if (contactTel.getTelType().equals("Home")) {
+				toDeleteContactTelUPD = contactTel;
+			}
+		}
+		contactTelsUPD.remove(toDeleteContactTelUPD);
+		contactService.save(contactUPD);
+
 		// Example with SELECT *
 		listContacts(contactService.findAll());
 
@@ -23,12 +55,15 @@ public class App {
 
 		// Example with SELECT SINGLE*
 		singleContact(contactService.findById(1L));
-		
-		// Example with SELECT * (using POJO) 
-		// Este exemplo é interessante, uma vez que utilizo um POJO 
+
+		// Example with SELECT * (using POJO)
+		// Este exemplo é interessante, uma vez que utilizo um POJO
 		// para tratar de cada item seleccionado
 		listContactsWithPOJO(contactServicePOJO.findAll());
 
+		// Example with DELETE
+		Contact contactDEL = contactService.findById(1l);
+		contactService.delete(contactDEL);
 	}
 
 	private static void listContactsWithPOJO(List<ContactSummary> contactsSummary) {
@@ -39,7 +74,7 @@ public class App {
 			System.out.println();
 		}
 	}
-	
+
 	private static void singleContact(Contact contact) {
 		System.out.println("");
 		System.out.println("Single Contact:");
