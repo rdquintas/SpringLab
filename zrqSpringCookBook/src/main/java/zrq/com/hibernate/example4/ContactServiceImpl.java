@@ -4,6 +4,7 @@ import java.util.List;
 
 import javax.persistence.EntityManager;
 import javax.persistence.PersistenceContext;
+import javax.persistence.TypedQuery;
 
 import org.apache.commons.logging.Log;
 import org.apache.commons.logging.LogFactory;
@@ -30,12 +31,15 @@ public class ContactServiceImpl implements ContactService {
 
 	@Override
 	public List<Contact> findAllWithDetail() {
-		return null;
+		List<Contact> contacts = em.createNamedQuery("Contact.findAllWithDetail", Contact.class).getResultList();
+		return contacts;
 	}
 
 	@Override
 	public Contact findById(Long id) {
-		return null;
+		TypedQuery<Contact> query = em.createNamedQuery("Contact.findById", Contact.class);
+		query.setParameter("id", id);
+		return query.getSingleResult();
 	}
 
 	@Override
