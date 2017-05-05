@@ -31,7 +31,7 @@ Project | Information
 [zrq.com.beans.injection.constructor](https://github.com/rdquintas/SpringLab/tree/master/zrqSpringCookBook/src/main/java/zrq/com/beans/injection/constructor) | This example show Dependency Injection CONSTRUCTOR based
 [zrq.com.beans.injection.settergetter](https://github.com/rdquintas/SpringLab/tree/master/zrqSpringCookBook/src/main/java/zrq/com/beans/injection/settergetter) | This example show Dependency Injection SETTER/GETTER based
 [zrq.com.beans.validator](https://github.com/rdquintas/SpringLab/tree/master/zrqSpringCookBook/src/main/java/zrq/com/beans/validator) | This example uses Validator to validate beans
-[zrq.com.beans.validator2](https://github.com/rdquintas/SpringLab/tree/master/zrqSpringCookBook/src/main/java/zrq/com/beans/validator2) | This example uses Spring Type Conversion System
+[zrq.com.beans.validator2](https://github.com/rdquintas/SpringLab/tree/master/zrqSpringCookBook/src/main/java/zrq/com/beans/validator2) | This example uses Spring Type Conversion System. Implementing a Custom Converter
 
 
 ## Hibernate
