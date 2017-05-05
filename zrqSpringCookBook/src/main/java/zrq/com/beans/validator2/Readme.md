@@ -1,0 +1,1 @@
+This example uses Validator to validade beans
