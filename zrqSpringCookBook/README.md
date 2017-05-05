@@ -30,7 +30,8 @@ Project | Information
 [zrq.com.beans.events.spring](https://github.com/rdquintas/SpringLab/tree/master/zrqSpringCookBook/src/main/java/zrq/com/beans/events/spring) | This example shows how to Spring STANDARD built-in events
 [zrq.com.beans.injection.constructor](https://github.com/rdquintas/SpringLab/tree/master/zrqSpringCookBook/src/main/java/zrq/com/beans/injection/constructor) | This example show Dependency Injection CONSTRUCTOR based
 [zrq.com.beans.injection.settergetter](https://github.com/rdquintas/SpringLab/tree/master/zrqSpringCookBook/src/main/java/zrq/com/beans/injection/settergetter) | This example show Dependency Injection SETTER/GETTER based
-[zrq.com.beans.validator](https://github.com/rdquintas/SpringLab/tree/master/zrqSpringCookBook/src/main/java/zrq/com/beans/validator) | This example uses Validator to validade beans
+[zrq.com.beans.validator](https://github.com/rdquintas/SpringLab/tree/master/zrqSpringCookBook/src/main/java/zrq/com/beans/validator) | This example uses Validator to validate beans
+[zrq.com.beans.validator2](https://github.com/rdquintas/SpringLab/tree/master/zrqSpringCookBook/src/main/java/zrq/com/beans/validator2) | This example uses Spring Type Conversion System
 
 
 ## Hibernate

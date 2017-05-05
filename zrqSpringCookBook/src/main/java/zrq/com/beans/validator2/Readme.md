@@ -1,1 +1,1 @@
-This example uses Validator to validade beans
+This example uses Spring Type Conversion System
